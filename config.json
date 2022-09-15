@@ -1,0 +1,23 @@
+{
+  "metakernel": "/Users/aescalante/spice/missions/rosetta/rosetta/kernels/mk/ROS_OPS_LOCAL.TM",
+  "utc0": "2015-10-21T07:03:42.898",
+  "utcf": "2015-12-15T20:30:38.797",
+  "tsamples": "5000",
+  "observer": "ROSETTA",
+  "observer_frame": "ROS_OSIRIS_NAC",
+  "target": "67P/C-G",
+  "target_frame": "67P/C-G_CK",
+  "illumsource": "SUN",
+  "targetobj": "churi.obj",
+  "texture": "",
+  "yfov": "0.043",
+  "aspectratio": "1.0",
+  "pxlines": "224",
+  "pxsamples": "224",
+  "lightfactor": "5",
+  "smooth": "",
+  "plot": "False",
+  "save": "True",
+  "labelfile": "True",
+  "output": "SIM/"
+}
