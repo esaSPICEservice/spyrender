@@ -1,0 +1,24 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.DS_Store
+.DS_Store?
+*.o
+*.pyc
+*.so
+
+# Local MK
+*_local.tm
+*_LOCAL.TM
+
+
+# Pycharm specific things
+.idea/
+
+# python things
+*.egg-info*
+dist/
+.cache/
+__pycache__/
+.eggs/
+build/
+

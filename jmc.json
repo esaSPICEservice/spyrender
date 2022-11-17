@@ -1,0 +1,22 @@
+{
+  "metakernel": "/Users/aescalante/spice/missions/juice/juice/kernels/mk/juice_crema_5_1_150lb_local.tm",
+  "utc0": "2035-May-19 06:45:39.929",
+  "utcf": "2035-May-19 06:45:40.929",
+  "tsamples": "1",
+  "observer": "JUICE",
+  "camera": "JUICE_JMC-1",
+  "camera_frame": "",
+  "targetsobj": ["models/jupiter.obj", "models/ganymede.obj"],
+  "targetsname": ["JUPITER", "GANYMEDE"],
+  "targetsframe": ["IAU_JUPITER", "IAU_GANYMEDE"],
+  "illumsource": "SUN",
+  "yfov": "",
+  "aspectratio": "",
+  "pxlines": "",
+  "pxsamples": "",
+  "lightfactor": "5",
+  "smooth": "True",
+  "plot": "False",
+  "save": "True",
+  "output": "SIM/"
+}
