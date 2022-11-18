@@ -213,4 +213,4 @@ def main(config):
                     plot=(config['plot']), save=config['save'], imname=imname)
 
    return
-main(config='config/jmc.json')
+main(config='config/config.json')
