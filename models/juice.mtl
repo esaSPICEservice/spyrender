@@ -1,0 +1,14 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl Default
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump juice_textures/juice_uv_low_Normal.02___Default.png
+map_Kd juice_textures/juice_uv_low_BaseColor.02___Default.png

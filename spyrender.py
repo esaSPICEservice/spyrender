@@ -36,7 +36,7 @@ def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfac
    #
    # camera position
    #
-   camera = pyrender.PerspectiveCamera(yfov=np.deg2rad(float(yfov)), aspectRatio=ar)
+   camera = pyrender.PerspectiveCamera(yfov=np.deg2rad(float(yfov)), aspectRatio=ar, znear=0.0001)
    nc = pyrender.Node(camera=camera,
                       translation=[0, 0, 0],
                       rotation=[-cambody.q[1], -cambody.q[2], -cambody.q[3], cambody.q[0]])
