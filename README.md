@@ -9,8 +9,8 @@ SPICE is an essential tool for scientists and engineers alike in the
 planetary science field for Solar System Geometry. Please visit the NAIF 
 website for more details about SPICE.
 
-![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/ROSETTA_2015-10-21T07:03:43.90.PNG?raw=true) 
-![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/JUICE_2035-05-19T06:45:39.93.PNG?raw=true) 
+![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/ROSETTA_2015-10-21T07:03:43.80.PNG?raw=true) 
+![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/JUICE_2035-05-19T06:45:40.93.PNG?raw=true) 
 
 Function and Purpose
 --------------------
@@ -39,6 +39,26 @@ Configuration file
 
 The parameters to be specified in the configuration file are described hereafter:
 
+- **Metakernel**: Path to the meta-kernel to load.
+- **utc0**: Start date
+- **utcf**: End date
+- **tsamples**: Number of samples (number of images)
+- **observer**: Name of observer body providing position of the camera focal point
+- **camera**: Name of instrument as defined in the SPICE Instrument Kernel for which field of view and detector parameters will be extracted
+- **camera frame** (optional): Reference frame of the camera, if left blank, SPyRender will try to obtain the instrument frame from the kernel pool 
+- **yfov** (optional): Field of view reference angle, if left blank, SPyRender will try to obtain the reference angle from the kernel pool 
+- **aspectratio** (optional): Ratio of Field of view cross angle to reference angle, if left blank, SPyRender will try to compute the aspect ratio from the kernel pool 
+- **pxlines** (optional): Pixel lines, if left blank, SPyRender will try to obtain the pixel lines from the kernel pool 
+- **pxsamples** (optional): Pixel samples, if left blank, SPyRender will try to obtain the pixel samples from the kernel pool 
+- **targetsobj**: List specifying the path to the shape models (.OBJ format) of the different targets
+- **targetsname**: List specifying the body name of the different targets
+- **targetsframe**: List specifying the body fixed reference frame of the different targets
+- **illumsource**: Name of the illumination source
+- **lightfactor**: Float controlling the intensity of the illumination source
+- **smooth**: If True, the shading of faces will be smooth, if False, the shading of faces will be flat. As a rule of thumb, smooth should be set as True for ellipsoids and False for other bodies.
+- **plot**: If True, it will plot each render image with Matplotlib
+- **save**: If True, it will save each render image in the output directory
+- **output**: Path to the output directory where to save the render images
 
 Installation
 ------------
