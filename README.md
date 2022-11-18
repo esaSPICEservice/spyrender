@@ -10,7 +10,7 @@ planetary science field for Solar System Geometry. Please visit the NAIF
 website for more details about SPICE.
 
 ![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/ROSETTA_2015-10-21T07:03:43.80.PNG?raw=true) 
-![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/JUICE_2035-05-19T06:45:40.93.PNG?raw=true) 
+![alt text](https://github.com/esaSPICEservice/spyrender/blob/master/SIM/JUICE_JMC-1_2035-05-19T06:45:40.93.PNG?raw=true) 
 
 Function and Purpose
 --------------------
