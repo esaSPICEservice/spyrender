@@ -15,8 +15,11 @@
   "targetsframe": ["JUICE_SPACECRAFT", "IAU_JUPITER", "IAU_GANYMEDE"],
   "illumsource": "SUN",
   "lightfactor": "10",
-  "smooth": "True",
-  "plot": "False",
-  "save": "True",
+  "znear": 0.001,
+  "bg": [0, 0, 0, 0],
+  "alpha": false,
+  "smooth": true,
+  "plot": false,
+  "save": true,
   "output": "SIM/"
 }

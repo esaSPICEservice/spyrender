@@ -14,9 +14,12 @@
   "targetsname": ["67P/C-G"],
   "targetsframe": ["67P/C-G_CK"],
   "illumsource": "SUN",
-  "lightfactor": "5",
-  "smooth": "",
-  "plot": "False",
-  "save": "True",
+  "lightfactor": "10",
+  "znear": 0.001,
+  "bg": [0, 0, 0, 0],
+  "alpha": false,
+  "smooth": true,
+  "plot": false,
+  "save": true,
   "output": "SIM/"
 }

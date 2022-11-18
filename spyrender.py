@@ -21,12 +21,12 @@ import json
    
 '''
 
-def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfactor=10, imname='sim_image.png', plot=True, save=False):
+def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfactor=10, znear=1, bg=0, alpha=False, imname='sim_image.png', plot=True, save=False):
 
    #
    # load targets models
    #
-   scene = pyrender.Scene(bg_color=0)
+   scene = pyrender.Scene(bg_color=bg)
    for target in targets:
       target.nm = pyrender.Node(mesh=target.mesh,
                                 translation=[target.r[0], target.r[1], target.r[2]],
@@ -36,7 +36,7 @@ def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfac
    #
    # camera position
    #
-   camera = pyrender.PerspectiveCamera(yfov=np.deg2rad(float(yfov)), aspectRatio=ar, znear=0.0001)
+   camera = pyrender.PerspectiveCamera(yfov=np.deg2rad(float(yfov)), aspectRatio=ar, znear=znear)
    nc = pyrender.Node(camera=camera,
                       translation=[0, 0, 0],
                       rotation=[-cambody.q[1], -cambody.q[2], -cambody.q[3], cambody.q[0]])
@@ -61,7 +61,10 @@ def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfac
    # render scene
    #
    # pyrender.Viewer(scene, shadows=True)
-   flags = pyrender.RenderFlags.SHADOWS_DIRECTIONAL
+   if alpha:
+      flags = pyrender.RenderFlags.SHADOWS_DIRECTIONAL | pyrender.RenderFlags.RGBA
+   else:
+      flags = pyrender.RenderFlags.SHADOWS_DIRECTIONAL
    r = pyrender.OffscreenRenderer(pxlines, pxsamples)
    color, depth = r.render(scene, flags=flags)
    plt.figure()
@@ -69,7 +72,7 @@ def generateImage(yfov, ar, pxlines, pxsamples, cambody, targets, rsun, lightfac
    plt.imshow(color)
    if save:
       plt.imsave(imname, color)
-   if plot == 'True':
+   if plot:
       plt.show()
    plt.close()
 
@@ -209,7 +212,8 @@ def main(config):
       generateImage(yfov=yfov, ar=ar,
                     pxlines=pixel_lines, pxsamples=pixel_samples,
                     cambody=camera, targets=targets, rsun=rsun,
-                    lightfactor=config['lightfactor'],
+                    znear=config["znear"],
+                    lightfactor=config['lightfactor'], bg=config["bg"], alpha=config["alpha"],
                     plot=(config['plot']), save=config['save'], imname=imname)
 
    return

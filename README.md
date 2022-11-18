@@ -55,6 +55,9 @@ The parameters to be specified in the configuration file are described hereafter
 - **targetsframe**: List specifying the body fixed reference frame of the different targets
 - **illumsource**: Name of the illumination source
 - **lightfactor**: Float controlling the intensity of the illumination source
+- **znear**: Float controlling the Near Clipping plane of the camera
+- **bg**: RGBA color vector for the background
+- **alpha**: If True, the background will not be rendered
 - **smooth**: If True, the shading of faces will be smooth, if False, the shading of faces will be flat. As a rule of thumb, smooth should be set as True for ellipsoids and False for other bodies.
 - **plot**: If True, it will plot each render image with Matplotlib
 - **save**: If True, it will save each render image in the output directory
